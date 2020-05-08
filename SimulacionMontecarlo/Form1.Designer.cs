@@ -30,37 +30,39 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblTo = new System.Windows.Forms.Label();
-            this.lblFrom = new System.Windows.Forms.Label();
-            this.txtFrom = new System.Windows.Forms.TextBox();
-            this.txtTo = new System.Windows.Forms.TextBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv31Reservations = new System.Windows.Forms.DataGridView();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClean = new System.Windows.Forms.Button();
+            this.btnSimulate = new System.Windows.Forms.Button();
+            this.txtFrom = new System.Windows.Forms.TextBox();
+            this.lblTo = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblFrom = new System.Windows.Forms.Label();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.txtTo = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgv32Reservations = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgv33Reservations = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgv34Reservations = new System.Windows.Forms.DataGridView();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv31Reservations)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv32Reservations)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv33Reservations)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv34Reservations)).BeginInit();
             this.SuspendLayout();
@@ -93,118 +95,15 @@
             this.tabPage1.Text = "31 Reservaciones";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lblTo
-            // 
-            this.lblTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(739, 32);
-            this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(74, 13);
-            this.lblTo.TabIndex = 5;
-            this.lblTo.Text = "Mostrar hasta:";
-            // 
-            // lblFrom
-            // 
-            this.lblFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(522, 32);
-            this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(77, 13);
-            this.lblFrom.TabIndex = 4;
-            this.lblFrom.Text = "Mostrar desde:";
-            // 
-            // txtFrom
-            // 
-            this.txtFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFrom.Location = new System.Drawing.Point(605, 29);
-            this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(100, 20);
-            this.txtFrom.TabIndex = 3;
-            // 
-            // txtTo
-            // 
-            this.txtTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTo.Enabled = false;
-            this.txtTo.Location = new System.Drawing.Point(819, 29);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(100, 20);
-            this.txtTo.TabIndex = 2;
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Location = new System.Drawing.Point(146, 29);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantity.TabIndex = 1;
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(25, 32);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(115, 13);
-            this.lblQuantity.TabIndex = 0;
-            this.lblQuantity.Text = "Cantidad simulaciones:";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(954, 497);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "32 Reservaciones";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.groupBox4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(954, 497);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "33 Reservaciones";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(954, 497);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "34 Reservaciones";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.txtFrom);
-            this.groupBox1.Controls.Add(this.lblTo);
-            this.groupBox1.Controls.Add(this.lblQuantity);
-            this.groupBox1.Controls.Add(this.lblFrom);
-            this.groupBox1.Controls.Add(this.txtQuantity);
-            this.groupBox1.Controls.Add(this.txtTo);
-            this.groupBox1.Location = new System.Drawing.Point(9, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(939, 72);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Parámetros simulación";
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgv31Reservations);
-            this.groupBox2.Location = new System.Drawing.Point(9, 85);
+            this.groupBox2.Location = new System.Drawing.Point(9, 120);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(939, 406);
+            this.groupBox2.Size = new System.Drawing.Size(939, 371);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vector de estado";
@@ -217,18 +116,112 @@
             this.dgv31Reservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv31Reservations.Location = new System.Drawing.Point(7, 20);
             this.dgv31Reservations.Name = "dgv31Reservations";
-            this.dgv31Reservations.Size = new System.Drawing.Size(926, 380);
+            this.dgv31Reservations.Size = new System.Drawing.Size(926, 345);
             this.dgv31Reservations.TabIndex = 0;
             // 
-            // tabPage5
+            // groupBox1
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(880, 420);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Resultados";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnClean);
+            this.groupBox1.Controls.Add(this.btnSimulate);
+            this.groupBox1.Controls.Add(this.txtFrom);
+            this.groupBox1.Controls.Add(this.lblTo);
+            this.groupBox1.Controls.Add(this.lblQuantity);
+            this.groupBox1.Controls.Add(this.lblFrom);
+            this.groupBox1.Controls.Add(this.txtQuantity);
+            this.groupBox1.Controls.Add(this.txtTo);
+            this.groupBox1.Location = new System.Drawing.Point(9, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(939, 108);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Parámetros simulación";
+            // 
+            // btnClean
+            // 
+            this.btnClean.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClean.Location = new System.Drawing.Point(763, 72);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(75, 23);
+            this.btnClean.TabIndex = 7;
+            this.btnClean.Text = "Limpiar";
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
+            // 
+            // btnSimulate
+            // 
+            this.btnSimulate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSimulate.Location = new System.Drawing.Point(844, 72);
+            this.btnSimulate.Name = "btnSimulate";
+            this.btnSimulate.Size = new System.Drawing.Size(75, 23);
+            this.btnSimulate.TabIndex = 6;
+            this.btnSimulate.Text = "Simular";
+            this.btnSimulate.UseVisualStyleBackColor = true;
+            // 
+            // txtFrom
+            // 
+            this.txtFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFrom.Location = new System.Drawing.Point(605, 29);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.Size = new System.Drawing.Size(100, 20);
+            this.txtFrom.TabIndex = 3;
+            // 
+            // lblTo
+            // 
+            this.lblTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTo.AutoSize = true;
+            this.lblTo.Location = new System.Drawing.Point(739, 32);
+            this.lblTo.Name = "lblTo";
+            this.lblTo.Size = new System.Drawing.Size(74, 13);
+            this.lblTo.TabIndex = 5;
+            this.lblTo.Text = "Mostrar hasta:";
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Location = new System.Drawing.Point(25, 32);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(115, 13);
+            this.lblQuantity.TabIndex = 0;
+            this.lblQuantity.Text = "Cantidad simulaciones:";
+            // 
+            // lblFrom
+            // 
+            this.lblFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFrom.AutoSize = true;
+            this.lblFrom.Location = new System.Drawing.Point(522, 32);
+            this.lblFrom.Name = "lblFrom";
+            this.lblFrom.Size = new System.Drawing.Size(77, 13);
+            this.lblFrom.TabIndex = 4;
+            this.lblFrom.Text = "Mostrar desde:";
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Location = new System.Drawing.Point(146, 29);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantity.TabIndex = 1;
+            // 
+            // txtTo
+            // 
+            this.txtTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTo.Enabled = false;
+            this.txtTo.Location = new System.Drawing.Point(819, 29);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(100, 20);
+            this.txtTo.TabIndex = 2;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(954, 497);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "32 Reservaciones";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -254,6 +247,17 @@
             this.dgv32Reservations.Size = new System.Drawing.Size(929, 459);
             this.dgv32Reservations.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(954, 497);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "33 Reservaciones";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -277,6 +281,17 @@
             this.dgv33Reservations.Name = "dgv33Reservations";
             this.dgv33Reservations.Size = new System.Drawing.Size(929, 459);
             this.dgv33Reservations.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.groupBox5);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(954, 497);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "34 Reservaciones";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -302,6 +317,16 @@
             this.dgv34Reservations.Size = new System.Drawing.Size(929, 459);
             this.dgv34Reservations.TabIndex = 0;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(954, 497);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Resultados";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,17 +338,17 @@
             this.Text = "Simulación Montecarlo";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv31Reservations)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv32Reservations)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv33Reservations)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv34Reservations)).EndInit();
             this.ResumeLayout(false);
@@ -353,6 +378,8 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dgv34Reservations;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button btnSimulate;
+        private System.Windows.Forms.Button btnClean;
     }
 }
 

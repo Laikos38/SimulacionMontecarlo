@@ -17,5 +17,15 @@ namespace SimulacionMontecarlo
             InitializeComponent();
         }
 
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            this.txtQuantity.Text = "";
+            this.txtFrom.Text = "";
+            this.txtTo.Text = "";
+            this.dgv31Reservations.Rows.Clear();
+            this.dgv32Reservations.Rows.Clear();
+            this.dgv33Reservations.Rows.Clear();
+            this.dgv34Reservations.Rows.Clear();
+        }
     }
 }
