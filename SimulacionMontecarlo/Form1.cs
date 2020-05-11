@@ -32,7 +32,7 @@ namespace SimulacionMontecarlo
         {
             if (!ValidateInputs())
             {
-                MessageBox.Show("Datos no válidos.");
+                MessageBox.Show("Error: Los datos ingresados no son correctos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -114,6 +114,10 @@ namespace SimulacionMontecarlo
 
         private bool ValidateInputs()
         {
+            if (String.IsNullOrEmpty(txtQuantity.Text) || txtQuantity.Text == "0" || String.IsNullOrEmpty(txtFrom.Text) || (Convert.ToInt32(txtQuantity.Text)) < (Convert.ToInt32(txtFrom.Text)))
+            {
+                return false;
+            }
             return true;
         }
     }
