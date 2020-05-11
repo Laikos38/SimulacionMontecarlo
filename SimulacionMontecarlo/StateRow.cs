@@ -15,7 +15,7 @@ namespace SimulacionMontecarlo
         public int totalEarnings { get; set; }
         public int extraPassengersCost { get; set; }
         public int totalProfit { get; set; }
-        public int acumProfit { get; set; }
+        public long acumProfit { get; set; }
 
     }
 }

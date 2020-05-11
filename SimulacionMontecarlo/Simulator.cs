@@ -15,7 +15,7 @@ namespace SimulacionMontecarlo
 
             IList<StateRow> stateRows = new List<StateRow>();
             int currentPassengers;
-            int acumProfit = 0;
+            long acumProfit = 0;
             int deniedSeats;
             int totalProfit;
             int extraPassengersCost;
