@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,10 +51,12 @@ namespace SimulacionMontecarlo
             IList<StateRow> rowsToShow34Seats = simulator.simulate(quantity, from, 34);
 
             // Poblar grid
+            
             this.dgv31Reservations.Rows.Clear();
             this.dgv32Reservations.Rows.Clear();
             this.dgv33Reservations.Rows.Clear();
             this.dgv34Reservations.Rows.Clear();
+            this.dgvResult.Rows.Clear();
             for (int i=0; i<rowsToShow31Seats.Count; i++)
             {
                 this.dgv31Reservations.Rows.Add(
@@ -99,10 +102,33 @@ namespace SimulacionMontecarlo
                     rowsToShow34Seats[i].totalProfit,
                     rowsToShow34Seats[i].acumProfit
                 );
+
+                
             }
 
 
+            this.dgvResult.Rows.Add(
+                    31,
+                    rowsToShow31Seats.Last().acumProfit
+                );
+            this.dgvResult.Rows.Add(
+                    32,
+                    rowsToShow32Seats.Last().acumProfit
+                );
+            this.dgvResult.Rows.Add(
+                    33,
+                    rowsToShow33Seats.Last().acumProfit
+                );
+            this.dgvResult.Rows.Add(
+                    34,
+                    rowsToShow34Seats.Last().acumProfit
+                );
+
+            
         }
+
+
+            
 
         private void AllowPositiveIntegerNumbers(object sender, KeyPressEventArgs e)
         {
@@ -119,6 +145,11 @@ namespace SimulacionMontecarlo
                 return false;
             }
             return true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
