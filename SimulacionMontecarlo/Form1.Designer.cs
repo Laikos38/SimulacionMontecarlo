@@ -32,6 +32,14 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv31Reservations = new System.Windows.Forms.DataGridView();
+            this.iterationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rndNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currentPassagers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deniedSeats = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalEarnings = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.extraPassangersCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acumProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnSimulate = new System.Windows.Forms.Button();
@@ -43,19 +51,6 @@
             this.txtTo = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.iterationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rndNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentPassagers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deniedSeats = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalEarnings = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.extraPassangersCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.acumProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv32Reservations = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +60,8 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgv33Reservations = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +71,8 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgv34Reservations = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +82,7 @@
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -90,12 +90,12 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv32Reservations)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv33Reservations)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv32Reservations)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv33Reservations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv34Reservations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,6 +142,7 @@
             // 
             // dgv31Reservations
             // 
+            this.dgv31Reservations.AllowUserToAddRows = false;
             this.dgv31Reservations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -160,9 +161,59 @@
             this.dgv31Reservations.MultiSelect = false;
             this.dgv31Reservations.Name = "dgv31Reservations";
             this.dgv31Reservations.ReadOnly = true;
+            this.dgv31Reservations.RowHeadersVisible = false;
             this.dgv31Reservations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgv31Reservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv31Reservations.Size = new System.Drawing.Size(926, 345);
             this.dgv31Reservations.TabIndex = 0;
+            // 
+            // iterationNumber
+            // 
+            this.iterationNumber.HeaderText = "n°";
+            this.iterationNumber.Name = "iterationNumber";
+            this.iterationNumber.ReadOnly = true;
+            // 
+            // rndNumber
+            // 
+            this.rndNumber.HeaderText = "RND";
+            this.rndNumber.Name = "rndNumber";
+            this.rndNumber.ReadOnly = true;
+            // 
+            // currentPassagers
+            // 
+            this.currentPassagers.HeaderText = "Pasaj. Presentes";
+            this.currentPassagers.Name = "currentPassagers";
+            this.currentPassagers.ReadOnly = true;
+            // 
+            // deniedSeats
+            // 
+            this.deniedSeats.HeaderText = "Asientos negados";
+            this.deniedSeats.Name = "deniedSeats";
+            this.deniedSeats.ReadOnly = true;
+            // 
+            // totalEarnings
+            // 
+            this.totalEarnings.HeaderText = "Utilidad";
+            this.totalEarnings.Name = "totalEarnings";
+            this.totalEarnings.ReadOnly = true;
+            // 
+            // extraPassangersCost
+            // 
+            this.extraPassangersCost.HeaderText = "U. p/asiento negado";
+            this.extraPassangersCost.Name = "extraPassangersCost";
+            this.extraPassangersCost.ReadOnly = true;
+            // 
+            // totalProfit
+            // 
+            this.totalProfit.HeaderText = "Utilidad total";
+            this.totalProfit.Name = "totalProfit";
+            this.totalProfit.ReadOnly = true;
+            // 
+            // acumProfit
+            // 
+            this.acumProfit.HeaderText = "Utilidad total acum.";
+            this.acumProfit.Name = "acumProfit";
+            this.acumProfit.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -284,114 +335,9 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Vector de estado";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.groupBox4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(954, 497);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "33 Reservaciones";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.dgv33Reservations);
-            this.groupBox4.Location = new System.Drawing.Point(6, 6);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(942, 485);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Vector de estado";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(954, 497);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "34 Reservaciones";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.dgv34Reservations);
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(942, 485);
-            this.groupBox5.TabIndex = 9;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Vector de estado";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(954, 497);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Resultados";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // iterationNumber
-            // 
-            this.iterationNumber.HeaderText = "n°";
-            this.iterationNumber.Name = "iterationNumber";
-            this.iterationNumber.ReadOnly = true;
-            // 
-            // rndNumber
-            // 
-            this.rndNumber.HeaderText = "RND";
-            this.rndNumber.Name = "rndNumber";
-            this.rndNumber.ReadOnly = true;
-            // 
-            // currentPassagers
-            // 
-            this.currentPassagers.HeaderText = "Pasaj. Presentes";
-            this.currentPassagers.Name = "currentPassagers";
-            this.currentPassagers.ReadOnly = true;
-            // 
-            // deniedSeats
-            // 
-            this.deniedSeats.HeaderText = "Asientos negados";
-            this.deniedSeats.Name = "deniedSeats";
-            this.deniedSeats.ReadOnly = true;
-            // 
-            // totalEarnings
-            // 
-            this.totalEarnings.HeaderText = "Utilidad";
-            this.totalEarnings.Name = "totalEarnings";
-            this.totalEarnings.ReadOnly = true;
-            // 
-            // extraPassangersCost
-            // 
-            this.extraPassangersCost.HeaderText = "U. p/asiento negado";
-            this.extraPassangersCost.Name = "extraPassangersCost";
-            this.extraPassangersCost.ReadOnly = true;
-            // 
-            // totalProfit
-            // 
-            this.totalProfit.HeaderText = "Utilidad total";
-            this.totalProfit.Name = "totalProfit";
-            this.totalProfit.ReadOnly = true;
-            // 
-            // acumProfit
-            // 
-            this.acumProfit.HeaderText = "Utilidad total acum.";
-            this.acumProfit.Name = "acumProfit";
-            this.acumProfit.ReadOnly = true;
-            // 
             // dgv32Reservations
             // 
+            this.dgv32Reservations.AllowUserToAddRows = false;
             this.dgv32Reservations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -410,7 +356,9 @@
             this.dgv32Reservations.MultiSelect = false;
             this.dgv32Reservations.Name = "dgv32Reservations";
             this.dgv32Reservations.ReadOnly = true;
+            this.dgv32Reservations.RowHeadersVisible = false;
             this.dgv32Reservations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgv32Reservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv32Reservations.Size = new System.Drawing.Size(930, 460);
             this.dgv32Reservations.TabIndex = 1;
             // 
@@ -462,8 +410,33 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(954, 497);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "33 Reservaciones";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.dgv33Reservations);
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(942, 485);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Vector de estado";
+            // 
             // dgv33Reservations
             // 
+            this.dgv33Reservations.AllowUserToAddRows = false;
             this.dgv33Reservations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -482,7 +455,9 @@
             this.dgv33Reservations.MultiSelect = false;
             this.dgv33Reservations.Name = "dgv33Reservations";
             this.dgv33Reservations.ReadOnly = true;
+            this.dgv33Reservations.RowHeadersVisible = false;
             this.dgv33Reservations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgv33Reservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv33Reservations.Size = new System.Drawing.Size(930, 460);
             this.dgv33Reservations.TabIndex = 2;
             // 
@@ -534,8 +509,33 @@
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             this.dataGridViewTextBoxColumn16.ReadOnly = true;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.groupBox5);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(954, 497);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "34 Reservaciones";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.dgv34Reservations);
+            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(942, 485);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Vector de estado";
+            // 
             // dgv34Reservations
             // 
+            this.dgv34Reservations.AllowUserToAddRows = false;
             this.dgv34Reservations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -554,7 +554,9 @@
             this.dgv34Reservations.MultiSelect = false;
             this.dgv34Reservations.Name = "dgv34Reservations";
             this.dgv34Reservations.ReadOnly = true;
+            this.dgv34Reservations.RowHeadersVisible = false;
             this.dgv34Reservations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgv34Reservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv34Reservations.Size = new System.Drawing.Size(930, 460);
             this.dgv34Reservations.TabIndex = 3;
             // 
@@ -606,6 +608,16 @@
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             this.dataGridViewTextBoxColumn24.ReadOnly = true;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(954, 497);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Resultados";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,12 +635,12 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv32Reservations)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv33Reservations)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv32Reservations)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv33Reservations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv34Reservations)).EndInit();
             this.ResumeLayout(false);
 
