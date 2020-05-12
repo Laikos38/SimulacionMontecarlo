@@ -57,6 +57,9 @@ namespace SimulacionMontecarlo
             this.dgv33Reservations.Rows.Clear();
             this.dgv34Reservations.Rows.Clear();
             this.dgvResult.Rows.Clear();
+            txtAverage.Clear();
+            txtResult.Clear();
+
             for (int i=0; i<rowsToShow31Seats.Count; i++)
             {
                 this.dgv31Reservations.Rows.Add(
@@ -125,6 +128,28 @@ namespace SimulacionMontecarlo
                 );
 
             
+            txtAverage.Text = Convert.ToString((rowsToShow32Seats.Last().acumProfit) / quantity);
+
+            if ((rowsToShow31Seats.Last().acumProfit > rowsToShow32Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+            {
+                txtResult.Text = "Se recomienda realizar una sobreventa de 31 reservas";
+            }
+            else
+            {
+                if ((rowsToShow32Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow32Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+                {
+                    txtResult.Text = "Se recomienda realizar una sobreventa de 32 reservas";
+                }
+                else
+                {
+                    if ((rowsToShow33Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+                    {
+                        txtResult.Text = "Se recomienda realizar una sobreventa de 33 reservas";
+                    }
+                    else
+                        txtResult.Text = "Se recomienda realizar una sobreventa de 34 reservas";
+                }
+            }
         }
 
 
@@ -147,9 +172,5 @@ namespace SimulacionMontecarlo
             return true;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

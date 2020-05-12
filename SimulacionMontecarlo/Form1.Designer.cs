@@ -83,15 +83,15 @@
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtAverage = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtResult = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtResult = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtAverage = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,9 +107,9 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv34Reservations)).BeginInit();
             this.tabPage5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -633,12 +633,61 @@
             this.tabPage5.Text = "Resultados";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtAverage);
+            this.groupBox7.Controls.Add(this.label2);
+            this.groupBox7.Controls.Add(this.label1);
+            this.groupBox7.Controls.Add(this.txtResult);
+            this.groupBox7.Location = new System.Drawing.Point(427, 6);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(439, 104);
+            this.groupBox7.TabIndex = 6;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Resultados";
+            // 
+            // txtAverage
+            // 
+            this.txtAverage.Enabled = false;
+            this.txtAverage.Location = new System.Drawing.Point(211, 23);
+            this.txtAverage.Name = "txtAverage";
+            this.txtAverage.Size = new System.Drawing.Size(169, 20);
+            this.txtAverage.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Recomendacion:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Utilidad promedio para 32 reservaciones:";
+            // 
+            // txtResult
+            // 
+            this.txtResult.Enabled = false;
+            this.txtResult.Location = new System.Drawing.Point(100, 58);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.Size = new System.Drawing.Size(280, 20);
+            this.txtResult.TabIndex = 2;
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.dgvResult);
             this.groupBox6.Location = new System.Drawing.Point(16, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(369, 307);
+            this.groupBox6.Size = new System.Drawing.Size(369, 196);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Utilidades";
@@ -662,7 +711,7 @@
             this.dgvResult.RowHeadersVisible = false;
             this.dgvResult.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResult.Size = new System.Drawing.Size(357, 282);
+            this.dgvResult.Size = new System.Drawing.Size(357, 171);
             this.dgvResult.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn25
@@ -676,54 +725,6 @@
             this.dataGridViewTextBoxColumn26.HeaderText = "Utilidad Total";
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            // 
-            // txtResult
-            // 
-            this.txtResult.Location = new System.Drawing.Point(100, 58);
-            this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(280, 20);
-            this.txtResult.TabIndex = 2;
-            this.txtResult.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Utilidad promedio para 32 reservaciones:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Recomendacion:";
-            // 
-            // txtAverage
-            // 
-            this.txtAverage.Location = new System.Drawing.Point(211, 23);
-            this.txtAverage.Name = "txtAverage";
-            this.txtAverage.Size = new System.Drawing.Size(169, 20);
-            this.txtAverage.TabIndex = 5;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.txtAverage);
-            this.groupBox7.Controls.Add(this.label2);
-            this.groupBox7.Controls.Add(this.label1);
-            this.groupBox7.Controls.Add(this.txtResult);
-            this.groupBox7.Location = new System.Drawing.Point(427, 6);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(439, 104);
-            this.groupBox7.TabIndex = 6;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Resultados";
             // 
             // Form1
             // 
@@ -750,10 +751,10 @@
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv34Reservations)).EndInit();
             this.tabPage5.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
             this.ResumeLayout(false);
 
         }
