@@ -41,7 +41,7 @@ namespace SimulacionMontecarlo
 
                 if ((i >= from-1 && i <= from + 99) || i == (quantity - 1))
                 {
-                    StateRow row = new StateRow { currentPassengers = currentPassengers, deniedSeats = deniedSeats, iterationNum = i + 1, extraPassengersCost = extraPassengersCost, rndNumber = rndNumber, totalEarnings = currentPassengers * 100, totalProfit = totalProfit, acumProfit = acumProfit};
+                    StateRow row = new StateRow { currentPassengers = currentPassengers, deniedSeats = deniedSeats, iterationNum = i + 1, extraPassengersCost = extraPassengersCost, rndNumber = Math.Truncate(rndNumber * 10000) / 10000, totalEarnings = currentPassengers * 100, totalProfit = totalProfit, acumProfit = acumProfit};
 
                     stateRows.Add(row);
                 }
