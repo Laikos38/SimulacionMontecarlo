@@ -751,6 +751,7 @@
             this.MinimumSize = new System.Drawing.Size(735, 490);
             this.Name = "Form1";
             this.Text = "Simulación Montecarlo";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

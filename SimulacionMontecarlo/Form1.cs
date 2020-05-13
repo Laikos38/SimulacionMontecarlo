@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -176,5 +177,26 @@ namespace SimulacionMontecarlo
             return true;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Optimización renderizado tabs y Datagrids.
+            this.SuspendLayout();
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dgv31Reservations, new object[] { true });
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dgv32Reservations, new object[] { true });
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dgv33Reservations, new object[] { true });
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dgv34Reservations, new object[] { true });
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dgvResult, new object[] { true });
+            this.ResumeLayout();
+        }
     }
 }
