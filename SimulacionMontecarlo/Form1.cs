@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,10 +51,15 @@ namespace SimulacionMontecarlo
             IList<StateRow> rowsToShow34Seats = simulator.simulate(quantity, from, 34);
 
             // Poblar grid
+            
             this.dgv31Reservations.Rows.Clear();
             this.dgv32Reservations.Rows.Clear();
             this.dgv33Reservations.Rows.Clear();
             this.dgv34Reservations.Rows.Clear();
+            this.dgvResult.Rows.Clear();
+            txtAverage.Clear();
+            txtResult.Clear();
+
             for (int i=0; i<rowsToShow31Seats.Count; i++)
             {
                 this.dgv31Reservations.Rows.Add(
@@ -99,10 +105,59 @@ namespace SimulacionMontecarlo
                     rowsToShow34Seats[i].totalProfit,
                     rowsToShow34Seats[i].acumProfit
                 );
+
+                
             }
 
 
+            this.dgvResult.Rows.Add(
+                    31,
+                    rowsToShow31Seats.Last().acumProfit,
+                    rowsToShow31Seats.Last().acumProfit / Convert.ToDouble(quantity)
+                );
+            this.dgvResult.Rows.Add(
+                    32,
+                    rowsToShow32Seats.Last().acumProfit,
+                    rowsToShow32Seats.Last().acumProfit / Convert.ToDouble(quantity)
+                );
+            this.dgvResult.Rows.Add(
+                    33,
+                    rowsToShow33Seats.Last().acumProfit,
+                    rowsToShow33Seats.Last().acumProfit / Convert.ToDouble(quantity)
+                );
+            this.dgvResult.Rows.Add(
+                    34,
+                    rowsToShow34Seats.Last().acumProfit,
+                    rowsToShow34Seats.Last().acumProfit / Convert.ToDouble(quantity)
+                );
+
+            
+            txtAverage.Text = Convert.ToString((rowsToShow32Seats.Last().acumProfit) / Convert.ToDouble(quantity));
+
+            if ((rowsToShow31Seats.Last().acumProfit > rowsToShow32Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+            {
+                txtResult.Text = "Se recomienda realizar una sobreventa de 31 reservas";
+            }
+            else
+            {
+                if ((rowsToShow32Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow32Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+                {
+                    txtResult.Text = "Se recomienda realizar una sobreventa de 32 reservas";
+                }
+                else
+                {
+                    if ((rowsToShow33Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+                    {
+                        txtResult.Text = "Se recomienda realizar una sobreventa de 33 reservas";
+                    }
+                    else
+                        txtResult.Text = "Se recomienda realizar una sobreventa de 34 reservas";
+                }
+            }
         }
+
+
+            
 
         private void AllowPositiveIntegerNumbers(object sender, KeyPressEventArgs e)
         {
@@ -120,5 +175,6 @@ namespace SimulacionMontecarlo
             }
             return true;
         }
+
     }
 }
