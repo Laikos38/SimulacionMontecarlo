@@ -92,6 +92,7 @@
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AvgUtility = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -125,7 +126,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(962, 523);
+            this.tabControl1.Size = new System.Drawing.Size(962, 497);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -135,7 +136,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(954, 497);
+            this.tabPage1.Size = new System.Drawing.Size(954, 471);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "31 Reservaciones";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -148,7 +149,7 @@
             this.groupBox2.Controls.Add(this.dgv31Reservations);
             this.groupBox2.Location = new System.Drawing.Point(9, 120);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(939, 371);
+            this.groupBox2.Size = new System.Drawing.Size(939, 345);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vector de estado";
@@ -177,7 +178,7 @@
             this.dgv31Reservations.RowHeadersVisible = false;
             this.dgv31Reservations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgv31Reservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv31Reservations.Size = new System.Drawing.Size(926, 345);
+            this.dgv31Reservations.Size = new System.Drawing.Size(926, 319);
             this.dgv31Reservations.TabIndex = 0;
             // 
             // iterationNumber
@@ -628,30 +629,34 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(954, 497);
+            this.tabPage5.Size = new System.Drawing.Size(954, 471);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Resultados";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.txtAverage);
             this.groupBox7.Controls.Add(this.label2);
             this.groupBox7.Controls.Add(this.label1);
             this.groupBox7.Controls.Add(this.txtResult);
-            this.groupBox7.Location = new System.Drawing.Point(427, 6);
+            this.groupBox7.Location = new System.Drawing.Point(407, 6);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(439, 104);
+            this.groupBox7.Size = new System.Drawing.Size(544, 104);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Resultados";
             // 
             // txtAverage
             // 
+            this.txtAverage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAverage.Enabled = false;
             this.txtAverage.Location = new System.Drawing.Point(211, 23);
             this.txtAverage.Name = "txtAverage";
-            this.txtAverage.Size = new System.Drawing.Size(169, 20);
+            this.txtAverage.Size = new System.Drawing.Size(327, 20);
             this.txtAverage.TabIndex = 5;
             // 
             // label2
@@ -676,10 +681,12 @@
             // 
             // txtResult
             // 
+            this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtResult.Enabled = false;
             this.txtResult.Location = new System.Drawing.Point(100, 58);
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(280, 20);
+            this.txtResult.Size = new System.Drawing.Size(438, 20);
             this.txtResult.TabIndex = 2;
             // 
             // groupBox6
@@ -687,7 +694,7 @@
             this.groupBox6.Controls.Add(this.dgvResult);
             this.groupBox6.Location = new System.Drawing.Point(16, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(369, 196);
+            this.groupBox6.Size = new System.Drawing.Size(369, 142);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Utilidades";
@@ -703,7 +710,8 @@
             this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26});
+            this.dataGridViewTextBoxColumn26,
+            this.AvgUtility});
             this.dgvResult.Location = new System.Drawing.Point(6, 19);
             this.dgvResult.MultiSelect = false;
             this.dgvResult.Name = "dgvResult";
@@ -711,7 +719,7 @@
             this.dgvResult.RowHeadersVisible = false;
             this.dgvResult.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResult.Size = new System.Drawing.Size(357, 171);
+            this.dgvResult.Size = new System.Drawing.Size(357, 117);
             this.dgvResult.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn25
@@ -726,11 +734,17 @@
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             this.dataGridViewTextBoxColumn26.ReadOnly = true;
             // 
+            // AvgUtility
+            // 
+            this.AvgUtility.HeaderText = "Utilidad Promedio";
+            this.AvgUtility.Name = "AvgUtility";
+            this.AvgUtility.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 547);
+            this.ClientSize = new System.Drawing.Size(986, 521);
             this.Controls.Add(this.tabControl1);
             this.MinimumSize = new System.Drawing.Size(735, 490);
             this.Name = "Form1";
@@ -825,6 +839,7 @@
         private System.Windows.Forms.TextBox txtAverage;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AvgUtility;
     }
 }
 

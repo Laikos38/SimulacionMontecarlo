@@ -112,23 +112,27 @@ namespace SimulacionMontecarlo
 
             this.dgvResult.Rows.Add(
                     31,
-                    rowsToShow31Seats.Last().acumProfit
+                    rowsToShow31Seats.Last().acumProfit,
+                    rowsToShow31Seats.Last().acumProfit / Convert.ToDouble(quantity)
                 );
             this.dgvResult.Rows.Add(
                     32,
-                    rowsToShow32Seats.Last().acumProfit
+                    rowsToShow32Seats.Last().acumProfit,
+                    rowsToShow32Seats.Last().acumProfit / Convert.ToDouble(quantity)
                 );
             this.dgvResult.Rows.Add(
                     33,
-                    rowsToShow33Seats.Last().acumProfit
+                    rowsToShow33Seats.Last().acumProfit,
+                    rowsToShow33Seats.Last().acumProfit / Convert.ToDouble(quantity)
                 );
             this.dgvResult.Rows.Add(
                     34,
-                    rowsToShow34Seats.Last().acumProfit
+                    rowsToShow34Seats.Last().acumProfit,
+                    rowsToShow34Seats.Last().acumProfit / Convert.ToDouble(quantity)
                 );
 
             
-            txtAverage.Text = Convert.ToString((rowsToShow32Seats.Last().acumProfit) / quantity);
+            txtAverage.Text = Convert.ToString((rowsToShow32Seats.Last().acumProfit) / Convert.ToDouble(quantity));
 
             if ((rowsToShow31Seats.Last().acumProfit > rowsToShow32Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
             {
