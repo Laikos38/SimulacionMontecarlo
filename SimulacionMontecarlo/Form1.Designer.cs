@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -331,7 +332,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(954, 497);
+            this.tabPage2.Size = new System.Drawing.Size(954, 471);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "32 Reservaciones";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -430,7 +431,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(954, 497);
+            this.tabPage3.Size = new System.Drawing.Size(954, 471);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "33 Reservaciones";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -529,7 +530,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(954, 497);
+            this.tabPage4.Size = new System.Drawing.Size(954, 471);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "34 Reservaciones";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -746,6 +747,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 521);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(735, 490);
             this.Name = "Form1";
             this.Text = "Simulación Montecarlo";
