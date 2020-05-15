@@ -42,6 +42,10 @@
             this.totalProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acumProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnSimulate = new System.Windows.Forms.Button();
             this.txtFrom = new System.Windows.Forms.TextBox();
@@ -234,6 +238,10 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.btnClean);
             this.groupBox1.Controls.Add(this.btnSimulate);
             this.groupBox1.Controls.Add(this.txtFrom);
@@ -248,6 +256,40 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parámetros simulación";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(330, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Costo extra";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(319, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Precio pasaje";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(396, 49);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 9;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowPositiveIntegerNumbers);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(396, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AllowPositiveIntegerNumbers);
             // 
             // btnClean
             // 
@@ -843,6 +885,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

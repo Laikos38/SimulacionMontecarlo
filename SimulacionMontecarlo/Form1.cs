@@ -24,6 +24,8 @@ namespace SimulacionMontecarlo
             this.txtQuantity.Text = "";
             this.txtFrom.Text = "";
             this.txtTo.Text = "";
+            this.textBox1.Text = "";
+            this.textBox2.Text = "";
             this.dgv31Reservations.Rows.Clear();
             this.dgv32Reservations.Rows.Clear();
             this.dgv33Reservations.Rows.Clear();
@@ -46,13 +48,31 @@ namespace SimulacionMontecarlo
                 to = quantity;
             this.txtTo.Text = to.ToString();
 
-            IList<StateRow> rowsToShow31Seats = simulator.simulate(quantity, from, 31);
-            IList<StateRow> rowsToShow32Seats = simulator.simulate(quantity, from, 32);
-            IList<StateRow> rowsToShow33Seats = simulator.simulate(quantity, from, 33);
-            IList<StateRow> rowsToShow34Seats = simulator.simulate(quantity, from, 34);
+            IList<StateRow> rowsToShow31Seats;
+            IList<StateRow> rowsToShow32Seats;
+            IList<StateRow> rowsToShow33Seats;
+            IList<StateRow> rowsToShow34Seats;
+
+            if (string.IsNullOrEmpty(this.textBox1.Text) || string.IsNullOrEmpty(this.textBox2.Text))
+            {
+                rowsToShow31Seats = simulator.simulate(quantity, from, 31);
+                rowsToShow32Seats = simulator.simulate(quantity, from, 32);
+                rowsToShow33Seats = simulator.simulate(quantity, from, 33);
+                rowsToShow34Seats = simulator.simulate(quantity, from, 34);
+
+            }
+            else
+            {
+                rowsToShow31Seats = simulator.simulate(quantity, from, 31, Convert.ToInt32(this.textBox1.Text), Convert.ToInt32(this.textBox2.Text));
+                rowsToShow32Seats = simulator.simulate(quantity, from, 32, Convert.ToInt32(this.textBox1.Text), Convert.ToInt32(this.textBox2.Text));
+                rowsToShow33Seats = simulator.simulate(quantity, from, 33, Convert.ToInt32(this.textBox1.Text), Convert.ToInt32(this.textBox2.Text));
+                rowsToShow34Seats = simulator.simulate(quantity, from, 34, Convert.ToInt32(this.textBox1.Text), Convert.ToInt32(this.textBox2.Text));
+
+            }
+
 
             // Poblar grid
-            
+
             this.dgv31Reservations.Rows.Clear();
             this.dgv32Reservations.Rows.Clear();
             this.dgv33Reservations.Rows.Clear();
@@ -198,5 +218,6 @@ namespace SimulacionMontecarlo
             dgvResult, new object[] { true });
             this.ResumeLayout();
         }
+
     }
 }

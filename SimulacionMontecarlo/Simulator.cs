@@ -9,7 +9,7 @@ namespace SimulacionMontecarlo
 {
     class Simulator
     {
-        public IList<StateRow> simulate(int quantity, int from, int maxReservations)
+        public IList<StateRow> simulate(int quantity, int from, int maxReservations, int precio = 100, int costo = 150)
         {
             Random random = new Random();
 
@@ -33,15 +33,15 @@ namespace SimulacionMontecarlo
                 if (currentPassengers > 30)
                 {
                     deniedSeats = currentPassengers - 30;
-                    extraPassengersCost = deniedSeats * 150;
+                    extraPassengersCost = deniedSeats * costo;
                 }
 
-                totalProfit = (currentPassengers * 100) - (extraPassengersCost);
+                totalProfit = (currentPassengers * precio) - (extraPassengersCost);
                 acumProfit += totalProfit;
 
                 if ((i >= from-1 && i <= from + 99) || i == (quantity - 1))
                 {
-                    StateRow row = new StateRow { currentPassengers = currentPassengers, deniedSeats = deniedSeats, iterationNum = i + 1, extraPassengersCost = extraPassengersCost, rndNumber = Math.Truncate(rndNumber * 10000) / 10000, totalEarnings = currentPassengers * 100, totalProfit = totalProfit, acumProfit = acumProfit};
+                    StateRow row = new StateRow { currentPassengers = currentPassengers, deniedSeats = deniedSeats, iterationNum = i + 1, extraPassengersCost = extraPassengersCost, rndNumber = Math.Truncate(rndNumber * 10000) / 10000, totalEarnings = currentPassengers * precio, totalProfit = totalProfit, acumProfit = acumProfit};
 
                     stateRows.Add(row);
                 }
