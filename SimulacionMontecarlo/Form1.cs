@@ -26,10 +26,14 @@ namespace SimulacionMontecarlo
             this.txtTo.Text = "";
             this.textBox1.Text = "";
             this.textBox2.Text = "";
+            this.txtGeneralAverage.Text = "";
+            this.txtResult.Text = "";
+            this.txtAverage.Text = "";
             this.dgv31Reservations.Rows.Clear();
             this.dgv32Reservations.Rows.Clear();
             this.dgv33Reservations.Rows.Clear();
             this.dgv34Reservations.Rows.Clear();
+            this.dgvResult.Rows.Clear();
         }
 
         private void btnSimulate_Click(object sender, EventArgs e)
@@ -59,6 +63,7 @@ namespace SimulacionMontecarlo
                 rowsToShow32Seats = simulator.simulate(quantity, from, 32);
                 rowsToShow33Seats = simulator.simulate(quantity, from, 33);
                 rowsToShow34Seats = simulator.simulate(quantity, from, 34);
+                this.txtGeneralAverage.Text = Convert.ToString(100 * 28);
 
             }
             else
@@ -67,6 +72,7 @@ namespace SimulacionMontecarlo
                 rowsToShow32Seats = simulator.simulate(quantity, from, 32, Convert.ToInt32(this.textBox1.Text), Convert.ToInt32(this.textBox2.Text));
                 rowsToShow33Seats = simulator.simulate(quantity, from, 33, Convert.ToInt32(this.textBox1.Text), Convert.ToInt32(this.textBox2.Text));
                 rowsToShow34Seats = simulator.simulate(quantity, from, 34, Convert.ToInt32(this.textBox1.Text), Convert.ToInt32(this.textBox2.Text));
+                this.txtGeneralAverage.Text = Convert.ToString(Convert.ToInt32(textBox1.Text) * 28);
 
             }
 
@@ -155,24 +161,31 @@ namespace SimulacionMontecarlo
             
             txtAverage.Text = Convert.ToString((rowsToShow32Seats.Last().acumProfit) / Convert.ToDouble(quantity));
 
-            if ((rowsToShow31Seats.Last().acumProfit > rowsToShow32Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+            if ((Convert.ToDouble(txtGeneralAverage.Text) > (rowsToShow31Seats.Last().acumProfit / Convert.ToDouble(quantity))) && (Convert.ToDouble(txtGeneralAverage.Text) > (rowsToShow32Seats.Last().acumProfit / Convert.ToDouble(quantity))) && ((Convert.ToDouble(txtGeneralAverage.Text) > rowsToShow33Seats.Last().acumProfit / Convert.ToDouble(quantity))) && (Convert.ToDouble(txtGeneralAverage.Text) > (rowsToShow34Seats.Last().acumProfit / Convert.ToDouble(quantity))))
             {
-                txtResult.Text = "Se recomienda realizar una sobreventa de 31 reservas";
+                txtResult.Text = "Se recomienda no realizar una sobreventa";
             }
             else
             {
-                if ((rowsToShow32Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow32Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+                if ((rowsToShow31Seats.Last().acumProfit > rowsToShow32Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow31Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
                 {
-                    txtResult.Text = "Se recomienda realizar una sobreventa de 32 reservas";
+                    txtResult.Text = "Se recomienda realizar una sobreventa de 31 reservas";
                 }
                 else
                 {
-                    if ((rowsToShow33Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+                    if ((rowsToShow32Seats.Last().acumProfit > rowsToShow33Seats.Last().acumProfit) && (rowsToShow32Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
                     {
-                        txtResult.Text = "Se recomienda realizar una sobreventa de 33 reservas";
+                        txtResult.Text = "Se recomienda realizar una sobreventa de 32 reservas";
                     }
                     else
-                        txtResult.Text = "Se recomienda realizar una sobreventa de 34 reservas";
+                    {
+                        if ((rowsToShow33Seats.Last().acumProfit > rowsToShow34Seats.Last().acumProfit))
+                        {
+                            txtResult.Text = "Se recomienda realizar una sobreventa de 33 reservas";
+                        }
+                        else
+                            txtResult.Text = "Se recomienda realizar una sobreventa de 34 reservas";
+                    }
                 }
             }
         }

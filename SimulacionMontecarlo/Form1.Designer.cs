@@ -98,6 +98,8 @@
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AvgUtility = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtGeneralAverage = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -681,13 +683,15 @@
             // 
             this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.txtGeneralAverage);
+            this.groupBox7.Controls.Add(this.label5);
             this.groupBox7.Controls.Add(this.txtAverage);
             this.groupBox7.Controls.Add(this.label2);
             this.groupBox7.Controls.Add(this.label1);
             this.groupBox7.Controls.Add(this.txtResult);
             this.groupBox7.Location = new System.Drawing.Point(407, 6);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(544, 104);
+            this.groupBox7.Size = new System.Drawing.Size(544, 136);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Resultados";
@@ -697,7 +701,7 @@
             this.txtAverage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAverage.Enabled = false;
-            this.txtAverage.Location = new System.Drawing.Point(211, 23);
+            this.txtAverage.Location = new System.Drawing.Point(211, 62);
             this.txtAverage.Name = "txtAverage";
             this.txtAverage.Size = new System.Drawing.Size(327, 20);
             this.txtAverage.TabIndex = 5;
@@ -706,7 +710,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 61);
+            this.label2.Location = new System.Drawing.Point(6, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 4;
@@ -716,7 +720,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Location = new System.Drawing.Point(6, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 13);
             this.label1.TabIndex = 3;
@@ -727,7 +731,7 @@
             this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtResult.Enabled = false;
-            this.txtResult.Location = new System.Drawing.Point(100, 58);
+            this.txtResult.Location = new System.Drawing.Point(100, 97);
             this.txtResult.Name = "txtResult";
             this.txtResult.Size = new System.Drawing.Size(438, 20);
             this.txtResult.TabIndex = 2;
@@ -782,6 +786,26 @@
             this.AvgUtility.HeaderText = "Utilidad Promedio";
             this.AvgUtility.Name = "AvgUtility";
             this.AvgUtility.ReadOnly = true;
+            // 
+            // txtGeneralAverage
+            // 
+            this.txtGeneralAverage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGeneralAverage.Enabled = false;
+            this.txtGeneralAverage.Location = new System.Drawing.Point(211, 29);
+            this.txtGeneralAverage.Name = "txtGeneralAverage";
+            this.txtGeneralAverage.Size = new System.Drawing.Size(327, 20);
+            this.txtGeneralAverage.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(199, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Utilidad promedio para 30 reservaciones:";
             // 
             // Form1
             // 
@@ -889,6 +913,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGeneralAverage;
+        private System.Windows.Forms.Label label5;
     }
 }
 
